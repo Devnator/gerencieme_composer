@@ -1,0 +1,22 @@
+{
+    "name": "agenciamaior/gerencieme",
+    "description": "Biblioteca de acesso à API do Gerencieme",
+    "type": "library",
+    "version": "1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Agência Maior",
+            "email": "alexandre.sottani@agenciamaior.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AgenciaMaior\\Gerencieme\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">5.4",
+        "vlucas/phpdotenv": "^2.5"
+    }
+}

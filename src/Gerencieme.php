@@ -27,7 +27,7 @@ class Gerencieme
             throw new Exception('Chave do Gerencieme não encontrada. Verifique se a linha GERENCIEME_KEY existe no seu arquivo .env');
         }
 
-        $url = sprintf('%s/%s/%s/%s/%s', self::BASE_URL, $endpoint, $method, $key, $params);
+        $url = implode('/', array_filter([self::BASE_URL, $endpoint, $method, $key, $params]));
 
         $request = file_get_contents($url);
         $json = json_decode(json_decode($request, true), true);

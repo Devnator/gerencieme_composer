@@ -2,7 +2,6 @@
     "name": "agenciamaior/gerencieme",
     "description": "Biblioteca de acesso à API do Gerencieme",
     "type": "library",
-    "version": "1.0.2",
     "license": "MIT",
     "authors": [
         {

@@ -1,0 +1,3 @@
+RewriteEngine On
+
+DirectoryIndex pages/home/index.php

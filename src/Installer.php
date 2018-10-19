@@ -7,14 +7,11 @@ use Composer\Plugin\PluginInterface;
 
 class Installer implements PluginInterface
 {
-    public static function preInstall()
-    {
-        echo 'Instalando arquivos do Gerencieme...';
-    }
-
     public function activate(Composer $composer, IOInterface $io)
     {
-        $projectRoot = __DIR__ . '/../../../';
+        echo "Instalando arquivos do Gerencieme...";
+
+        $projectRoot = __DIR__ . '/../../../../';
         $filesPath = __DIR__ . '/files/';
 
         $configPath = $projectRoot . '/config';
@@ -84,7 +81,7 @@ class Installer implements PluginInterface
         $envFile = $projectRoot . '.env';
 
         if (!file_exists($envFile)) {
-            echo '\nEntre com a chave do Gerencieme: ';
+            echo "\nEntre com a chave do Gerencieme: ";
             $input = rtrim(fgets(STDIN));
 
             $file = fopen($envFile, 'w');
@@ -92,6 +89,6 @@ class Installer implements PluginInterface
             fclose($file);
         }
 
-        echo '\nArquivos instalados com sucesso';
+        echo "\nArquivos instalados com sucesso";
     }
 }

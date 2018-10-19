@@ -1,8 +1,11 @@
 {
     "name": "agenciamaior/gerencieme",
     "description": "Biblioteca de acesso à API do Gerencieme",
-    "type": "library",
+    "type": "composer-plugin",
     "license": "MIT",
+    "extra": {
+        "class": "AgenciaMaior\\Gerencieme\\Installer"
+    },
     "authors": [
         {
             "name": "Agência Maior",
@@ -17,9 +20,5 @@
     "require": {
         "php": ">5.4",
         "vlucas/phpdotenv": "^2.5"
-    },
-    "scripts": {
-        "pre-install-cmd": "AgenciaMaior\\Gerencieme\\Installer::preInstall()",
-        "post-install-cmd": "AgenciaMaior\\Gerencieme\\Installer::copyFiles()"
     }
 }

@@ -1,14 +1,18 @@
 <?php
 namespace AgenciaMaior\Gerencieme;
 
-class Installer
+use Composer\Composer;
+use Composer\IO\IOInterface;
+use Composer\Plugin\PluginInterface;
+
+class Installer implements PluginInterface
 {
     public static function preInstall()
     {
         echo 'Instalando arquivos do Gerencieme...';
     }
 
-    public static function copyFiles()
+    public function activate(Composer $composer, IOInterface $io)
     {
         $projectRoot = __DIR__ . '/../../../';
         $filesPath = __DIR__ . '/files/';

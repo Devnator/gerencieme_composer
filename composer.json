@@ -17,5 +17,9 @@
     "require": {
         "php": ">5.4",
         "vlucas/phpdotenv": "^2.5"
+    },
+    "scripts": {
+        "pre-install-cmd": "AgenciaMaior\\Gerencieme\\Installer::preInstall()",
+        "post-install-cmd": "AgenciaMaior\\Gerencieme\\Installer::copyFiles()"
     }
 }
